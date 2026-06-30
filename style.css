@@ -6,25 +6,21 @@
 }
 
 :root {
-  /* Temática Roxo/Tech e Laranja unificada do Panfleto */
-  --bg-dark: #1b0721;            
-  --bg-darker: #100314;          
-  --bg-card: #280e2f;            
-  --bg-card-soft: rgba(40, 14, 47, 0.85); 
-  --border-card: rgba(255, 85, 0, 0.25); 
+  --bg-dark: #1b0721;
+  --bg-darker: #100314;
+  --bg-card: #280e2f;
+  --bg-card-soft: rgba(40, 14, 47, 0.85);
+  --border-card: rgba(255, 85, 0, 0.25);
 
-  /* Cores Institucionais Unificadas */
-  --brand-purple: #4a154b;       
-  --brand-purple-dark: #2b0b2c;  
-  --brand-orange: #ff5500;       
-  --brand-orange-dark: #cc4400;  
+  --brand-purple: #4a154b;
+  --brand-purple-dark: #2b0b2c;
+  --brand-orange: #ff5500;
+  --brand-orange-dark: #cc4400;
 
-  /* Textos adaptados para leitura sobre fundo escuro */
-  --text-main: #ffffff;          
-  --text-muted: #e2d5f3;         
-  --text-soft: #bfa8dd;          
+  --text-main: #ffffff;
+  --text-muted: #e2d5f3;
+  --text-soft: #bfa8dd;
 
-  /* Sombras e Elevações */
   --shadow-lg: 0 20px 45px rgba(16, 3, 20, 0.6);
   --shadow-md: 0 12px 26px rgba(16, 3, 20, 0.4);
 
@@ -41,7 +37,7 @@ html {
 body {
   background: var(--bg-dark);
   color: var(--text-main);
-  overflow-x: clip;
+  overflow-x: hidden;
   line-height: 1.6;
 }
 
@@ -50,8 +46,16 @@ img {
   display: block;
 }
 
-a, button {
+a,
+button {
   transition: all var(--transition);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #ffaa80;
+  outline-offset: 3px;
 }
 
 .glow-bg {
@@ -65,11 +69,10 @@ a, button {
   pointer-events: none;
 }
 
-/* HEADER */
-header {
+.site-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
   padding: 12px 6%;
   background: rgba(16, 3, 20, 0.98);
@@ -79,52 +82,45 @@ header {
   top: 0;
   z-index: 100;
 }
-/* CONTAINER DA LOGO COM ANIMAÇÃO DE ENTRADA */
+
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;          
-  padding: 0 20px;            
-  border-radius: 50px;          
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
-  transition: transform 0.2s ease;
-
-  /* Aplica a animação: dura 1 segundo, começa devagar e termina rápido (ease-out) */
+  background: #fff;
+  padding: 0 20px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   animation: deslizarDaEsquerda 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.logo:hover {
-  transform: scale(1.03);       
+  text-decoration: none;
 }
 
 .logo img {
-  max-width: 90px;                
+  max-width: 90px;
   max-height: 90px;
-  width: auto;
   object-fit: contain;
-  filter: none;                 
 }
 
-/* REGRA DA ANIMAÇÃO (KEYFRAMES) */
 @keyframes deslizarDaEsquerda {
-  0% {
+  from {
     opacity: 0;
-    transform: translateX(-50px); /* Começa 50px jogada para a esquerda */
+    transform: translateX(-50px);
   }
-  100% {
+
+  to {
     opacity: 1;
-    transform: translateX(0);     /* Termina na posição original perfeita */
+    transform: translateX(0);
   }
 }
 
-nav {
+.site-nav ul {
+  list-style: none;
   display: flex;
   align-items: center;
   gap: 24px;
 }
 
-nav a {
+.site-nav a {
   color: var(--text-muted);
   text-decoration: none;
   font-weight: 600;
@@ -132,11 +128,11 @@ nav a {
   font-size: 0.95rem;
 }
 
-nav a:hover {
+.site-nav a:hover {
   color: var(--brand-orange);
 }
 
-nav a::after {
+.site-nav a::after {
   content: '';
   position: absolute;
   left: 0;
@@ -147,7 +143,7 @@ nav a::after {
   transition: width var(--transition);
 }
 
-nav a:hover::after {
+.site-nav a:hover::after {
   width: 100%;
 }
 
@@ -155,6 +151,16 @@ nav a:hover::after {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.btn-speedtest,
+.btn-client,
+.cta-main,
+.cta-secondary,
+.btn-plan,
+.carousel-btn,
+.social-btn {
+  text-decoration: none;
 }
 
 .btn-speedtest {
@@ -167,7 +173,6 @@ nav a:hover::after {
   color: var(--brand-orange);
   border-radius: 50px;
   font-weight: 600;
-  text-decoration: none;
   font-size: 0.9rem;
 }
 
@@ -182,7 +187,6 @@ nav a:hover::after {
   color: #fff;
   padding: 10px 18px;
   border-radius: 50px;
-  text-decoration: none;
   font-weight: 700;
   font-size: 0.9rem;
   display: inline-flex;
@@ -209,7 +213,6 @@ nav a:hover::after {
   cursor: pointer;
 }
 
-/* HERO */
 .hero {
   padding: 80px 8% 60px;
 }
@@ -270,7 +273,6 @@ nav a:hover::after {
   color: #fff;
   padding: 14px 28px;
   border-radius: 50px;
-  text-decoration: none;
   font-weight: 800;
   display: inline-flex;
   align-items: center;
@@ -293,7 +295,6 @@ nav a:hover::after {
   color: #fff;
   padding: 14px 28px;
   border-radius: 50px;
-  text-decoration: none;
   font-weight: 700;
 }
 
@@ -302,7 +303,6 @@ nav a:hover::after {
   border-color: #fff;
 }
 
-/* CAROUSEL */
 .hero-carousel {
   background: var(--bg-card);
   border: 1px solid var(--border-card);
@@ -347,8 +347,15 @@ nav a:hover::after {
   text-transform: uppercase;
 }
 
-.carousel-badge.orange { background: rgba(255, 85, 0, 0.2); color: #ffa366;}
-.carousel-badge.purple { background: rgba(168, 85, 247, 0.2); color: #d8b4fe;}
+.carousel-badge.orange {
+  background: rgba(255, 85, 0, 0.2);
+  color: #ffa366;
+}
+
+.carousel-badge.purple {
+  background: rgba(168, 85, 247, 0.2);
+  color: #d8b4fe;
+}
 
 .carousel-speed {
   font-size: 2.8rem;
@@ -367,7 +374,6 @@ nav a:hover::after {
   border-radius: 12px;
   background: linear-gradient(90deg, var(--brand-purple), var(--brand-purple-dark));
   color: #fff;
-  text-decoration: none;
   font-weight: 700;
   width: fit-content;
   margin-top: 5px;
@@ -384,11 +390,13 @@ nav a:hover::after {
   margin-top: 25px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding-top: 15px;
+  gap: 10px;
 }
 
-.carousel-btn-nav, .carousel-play {
-  width: 38px;
-  height: 38px;
+.carousel-btn-nav,
+.carousel-play {
+  width: 44px;
+  height: 44px;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: var(--bg-darker);
@@ -397,9 +405,11 @@ nav a:hover::after {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
-.carousel-btn-nav:hover, .carousel-play:hover {
+.carousel-btn-nav:hover,
+.carousel-play:hover {
   border-color: var(--brand-orange);
   color: var(--brand-orange);
 }
@@ -411,8 +421,8 @@ nav a:hover::after {
 }
 
 .dot {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   border: none;
   background: rgba(255, 255, 255, 0.2);
@@ -425,8 +435,9 @@ nav a:hover::after {
   background: var(--brand-orange);
 }
 
-/* SEÇÃO PLANOS CONEXÃO FIXA */
-.plans-container {
+.plans-container,
+.benefits-section,
+.social-engagement {
   padding: 80px 8%;
 }
 
@@ -538,7 +549,6 @@ nav a:hover::after {
   padding: 14px;
   background: rgba(255, 255, 255, 0.04);
   color: #fff;
-  text-decoration: none;
   font-weight: 700;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -549,7 +559,6 @@ nav a:hover::after {
   border-color: var(--brand-purple);
 }
 
-/* SEÇÃO PLANOS DE INTERNET MÓVEL */
 .movel-section {
   padding: 80px 8%;
   background: linear-gradient(135deg, var(--bg-darker) 0%, #1a0520 100%);
@@ -578,16 +587,17 @@ nav a:hover::after {
   flex-direction: column;
   gap: 20px;
 }
+
 .icones-sociais {
-display: flex;
-gap: 40px;
-margin: 12px 0;
-align-items: center;
+  display: flex;
+  gap: 16px;
+  margin: 12px 0;
+  align-items: center;
+  flex-wrap: wrap;
 }
+
 .icones-sociais img {
-  margin-left: 25px;
   max-height: 30px;
-  
 }
 
 .mini-feature {
@@ -606,8 +616,16 @@ align-items: center;
   flex-shrink: 0;
 }
 
-.mini-feature h4 { font-size: 1.1rem; margin-bottom: 3px; }
-.mini-feature p { font-size: 0.9rem; color: var(--text-soft); margin: 0; }
+.mini-feature h4 {
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+}
+
+.mini-feature p {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  margin: 0;
+}
 
 .movel-highlight-card {
   background: var(--bg-card);
@@ -626,13 +644,24 @@ align-items: center;
   margin: 15px 0;
 }
 
-.big-gb span { font-size: 1.8rem; color: var(--brand-orange); }
-.movel-price { font-size: 1.1rem; margin-bottom: 25px; color: var(--text-muted); }
-.movel-price strong { font-size: 1.6rem; color: #fff; }
+.big-gb span {
+  font-size: 1.8rem;
+  color: var(--brand-orange);
+}
 
-/* SEÇÃO DE BENEFÍCIOS DO PROVEDOR */
+.movel-price {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: var(--text-muted);
+}
+
+.movel-price strong {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
 .benefits-section {
-  padding: 80px 8%;
+  padding-top: 0;
 }
 
 .grid-benefits {
@@ -666,10 +695,16 @@ align-items: center;
   transform: rotate(5deg);
 }
 
-.benefit-card h3 { font-size: 1.25rem; margin-bottom: 10px; }
-.benefit-card p { font-size: 0.95rem; color: var(--text-soft); }
+.benefit-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
 
-/* SEÇÃO APLICATIVO CDN TV */
+.benefit-card p {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+
 .tv-section {
   padding: 40px 8%;
 }
@@ -692,8 +727,17 @@ align-items: center;
   margin-bottom: 15px;
 }
 
-.tv-info h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 15px; }
-.tv-info p { color: var(--text-muted); max-width: 650px; margin-bottom: 25px; }
+.tv-info h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.tv-info p {
+  color: var(--text-muted);
+  max-width: 650px;
+  margin-bottom: 25px;
+}
 
 .tv-channels-logos {
   display: flex;
@@ -709,7 +753,6 @@ align-items: center;
   font-size: 0.9rem;
 }
 
-/* SISTEMA DE DISPONIBILIDADE (CEP) */
 .coverage-container {
   padding: 60px 6%;
   background: var(--bg-darker);
@@ -763,23 +806,34 @@ align-items: center;
   font-weight: 600;
 }
 
-.feedback-success { color: #10b981; }
-.feedback-error { color: #ef4444; }
+.feedback-success {
+  color: #10b981;
+}
 
-/* NOVA SEÇÃO DE ENGAJAMENTO DE REDES SOCIAIS */
+.feedback-error {
+  color: #ef4444;
+}
+
 .social-engagement {
   padding: 80px 8%;
   text-align: center;
   background: rgba(0, 0, 0, 0.15);
 }
 
-.social-content max-width {
+.social-content {
   max-width: 700px;
   margin: 0 auto;
 }
 
-.social-engagement h2 { font-size: 2.2rem; margin-bottom: 12px; }
-.social-engagement p { color: var(--text-soft); margin-bottom: 35px; }
+.social-engagement h2 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.social-engagement p {
+  color: var(--text-soft);
+  margin-bottom: 35px;
+}
 
 .social-buttons-grid {
   display: flex;
@@ -794,7 +848,6 @@ align-items: center;
   gap: 10px;
   padding: 14px 26px;
   border-radius: 50px;
-  text-decoration: none;
   font-weight: 700;
   color: #fff;
   font-size: 0.95rem;
@@ -820,73 +873,185 @@ align-items: center;
   filter: brightness(1.1);
 }
 
-/* FOOTER ATUALIZADO */
-footer {
+.site-footer {
   background: var(--bg-darker);
   padding: 60px 8% 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 40px;
-  margin-bottom: 40px;
-}
-
-.footer-brand p {
-  color: var(--text-soft);
-  font-size: 0.9rem;
-  margin-top: 10px;
-}
-
-
-.footer-nav-links h4, .footer-contacts-info h4 {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-  color: #fff;
-}
-
-.footer-nav-links a {
-  display: block;
-  color: var(--text-soft);
-  text-decoration: none;
-  margin-bottom: 10px;
-  font-size: 0.9rem;
-}
-
-.footer-nav-links a:hover { color: var(--brand-orange); }
-
-.footer-contacts-info p {
-  font-size: 0.9rem;
-  color: var(--text-soft);
-  margin-bottom: 12px;
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
-}
-
-.footer-contacts-info svg { color: var(--brand-orange); width: 16px; }
-
-.footer-bottom {
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding-top: 20px;
+  gap: 20px;
   color: var(--text-soft);
-  font-size: 0.85rem;
 }
 
-/* RESPONSIVIDADE COMPLETA */
-@media (max-width: 968px) {
-  header { padding: 15px 4%; }
-  .hero-content, .movel-content { grid-template-columns: 1fr; text-align: center; }
-  .hero-ctas, .social-buttons-grid { justify-content: center; }
-  nav { display: none; }
-  .menu-toggle { display: flex; }
-  .movel-highlight-card { max-width: 400px; margin: 0 auto; }
+.footer-inner h3 {
+  color: var(--brand-orange);
+  margin-bottom: 5px;
+}
+
+.footer-address {
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .site-header {
+    flex-wrap: wrap;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-content,
+  .movel-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-carousel {
+    order: 2;
+  }
+
+  .hero-copy {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 12px 5%;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    width: 100%;
+    order: 4;
+    display: none;
+  }
+
+  .site-nav.is-open {
+    display: block;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 16px 0 6px;
+  }
+
+  .site-nav a {
+    display: block;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-speedtest,
+  .btn-client {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero,
+  .plans-container,
+  .movel-section,
+  .benefits-section,
+  .tv-section,
+  .social-engagement {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .section-title h2,
+  .movel-text h2,
+  .tv-info h2,
+  .social-engagement h2 {
+    font-size: 1.8rem;
+  }
+
+  .carousel-track {
+    min-height: 300px;
+  }
+
+  .carousel-speed {
+    font-size: 2.3rem;
+  }
+
+  .coverage-container {
+    margin: 30px 5%;
+    padding: 40px 5%;
+  }
+
+  .coverage-search-box {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  #btn-consultar {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
-  .coverage-search-box { flex-direction: column; }
-  #btn-consultar { width: 100%; justify-content: center; }
+  .logo img {
+    max-width: 72px;
+    max-height: 72px;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+  }
+
+  .cta-main,
+  .cta-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .card,
+  .tv-banner,
+  .movel-highlight-card {
+    padding: 24px 18px;
+  }
+
+  .big-gb {
+    font-size: 3.4rem;
+  }
+
+  .grid-plans,
+  .grid-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .social-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }

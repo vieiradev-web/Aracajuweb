@@ -1,105 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Aracaju Web | Internet Fibra Óptica e Plano Móvel em Aracaju-SE</title>
-    <link href="style.css" rel="stylesheet"/>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <meta content="Internet Fibra Óptica em Aracaju com ultra velocidade, suporte especializado e planos residenciais e empresariais da Aracaju Web." name="description"/>
-    <link href="assets/favicon.ico" rel="icon"/>
-</head>
-<body>
 
-    <header>
-        <div class="logo">
-            <img alt="Aracaju Web" src="./assets/logo-removebg-preview.png"/>
-        </div>
-        <button aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menu de navegação" class="menu-toggle" id="menu-toggle" type="button">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Internet Fibra Óptica em Aracaju com ultra velocidade, suporte especializado e planos residenciais e empresariais da Aracaju Web." />
+    <title>Aracaju Web | Internet Fibra Óptica e Plano Móvel em Aracaju-SE</title>
+    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="logo" href="#topo" aria-label="Aracaju Web - início">
+            <img src="./assets/logo-removebg-preview.png" alt="Aracaju Web" />
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false"
+            aria-label="Abrir menu de navegação">
             <i data-lucide="menu"></i>
         </button>
-        <nav aria-hidden="true" id="main-navigation">
-            <a href="#planos">Planos Fibra</a>
-            <a href="#movel">Internet Móvel</a>
-            <a href="#beneficios">Benefícios</a>
-            <a href="#tv">Canais Grátis</a>
-            <a href="#cobertura">Cobertura</a>
+
+        <nav id="main-navigation" class="site-nav" aria-hidden="true">
+            <ul>
+                <li><a href="#planos">Planos Fibra</a></li>
+                <li><a href="#movel">Internet Móvel</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="#tv">Canais Grátis</a></li>
+                <li><a href="#cobertura">Cobertura</a></li>
+            </ul>
         </nav>
+
         <div class="header-actions">
-            <a class="btn-speedtest" href="https://www.speedtest.net/pt" rel="noopener noreferrer" target="_blank">
+            <a class="btn-speedtest" href="https://www.speedtest.net/pt" target="_blank" rel="noopener noreferrer">
                 <i data-lucide="gauge"></i> Teste de Velocidade
             </a>
-            <a class="btn-client" href="  https://aracajuweb.sgp.tsmx.com.br/central" rel="noopener noreferrer" target="_blank">
+            <a class="btn-client" href="https://aracajuweb.sgp.tsmx.com.br/central" target="_blank"
+                rel="noopener noreferrer">
                 <i data-lucide="user"></i> Área do Cliente
             </a>
         </div>
     </header>
 
-    <main>
-        <div class="glow-bg"></div>
+    <main id="topo">
+        <div class="glow-bg" aria-hidden="true"></div>
 
-        <section aria-label="Destaques da Aracaju Web" class="hero">
+        <section class="hero" aria-label="Destaques da Aracaju Web">
             <div class="hero-content">
                 <div class="hero-copy">
                     <div class="tagline">Fibra Óptica de Alta Performance</div>
                     <h1>Conectando você em <span>todos os lugares!</span></h1>
-                    <p>Internet ultraveloz com estabilidade digital e suporte especializado. Assine o plano perfeito para a sua casa ou escritório com condições exclusivas.</p>
+                    <p>Internet ultraveloz com estabilidade digital e suporte especializado. Assine o plano perfeito
+                        para sua casa ou escritório.</p>
+
                     <div class="hero-ctas">
-                        <a class="cta-main" href="https://wa.me/5579998870534" rel="noopener noreferrer" target="_blank">
+                        <a class="cta-main" href="https://wa.me/5579998870534" target="_blank"
+                            rel="noopener noreferrer">
                             <i data-lucide="phone"></i> Assine via WhatsApp
                         </a>
-                        <a class="cta-secondary" href="#planos">
-                            Ver Planos Conheça os Planos
-                        </a>
+                        <a class="cta-secondary" href="#planos">Ver planos</a>
                     </div>
                 </div>
-                
-                <div aria-label="Destaques promocionais" aria-roledescription="carousel" class="hero-carousel" role="region">
+
+                <div class="hero-carousel" aria-label="Destaques promocionais">
                     <div class="carousel-track">
-                        <article aria-hidden="false" class="carousel-slide active">
+                        <article class="carousel-slide active" aria-hidden="false">
                             <span class="carousel-badge">Mais vendido</span>
                             <h3>Plano Família</h3>
-                            <div class="carousel-speed">500 <span>MEGA</span></div>
-                            <p>O mais equilibrado: ideal para múltiplos dispositivos, streaming em 4K e trabalho remoto sem quedas.</p>
-                            <a class="carousel-btn" href="https://wa.me/5579998870534?text=Olá! Quero contratar o Plano de 500 Mega." rel="noopener noreferrer" target="_blank">
-                                Quero esse plano
-                            </a>
+                            <div class="carousel-speed">700 <span>MEGA</span></div>
+                            <p>Ideal para múltiplos dispositivos, streaming em 4K e trabalho remoto sem quedas.</p>
+                            <a class="carousel-btn"
+                                href="https://wa.me/5579998870534?text=Olá! Quero contratar o Plano Família de 700 Mega."
+                                target="_blank" rel="noopener noreferrer">Quero esse plano</a>
                         </article>
-                        
-                        <article aria-hidden="true" class="carousel-slide">
+
+                        <article class="carousel-slide" aria-hidden="true">
                             <span class="carousel-badge orange">Aracaju Web Móvel</span>
                             <h3>30GB de Internet Móvel</h3>
                             <div class="carousel-speed">R$ <span>39,90</span></div>
-                            <p>Ligações ilimitadas para todo o Brasil, WhatsApp sem descontar da franquia e cobertura nacional.</p>
-                            <a class="carousel-btn" href="https://wa.me/5579998870534?text=Olá! Quero saber sobre o plano móvel de 30GB." rel="noopener noreferrer" target="_blank">
-                                Quero o Plano Móvel
-                            </a>
+                            <p>Ligações ilimitadas para todo o Brasil, WhatsApp sem descontar da franquia e cobertura
+                                nacional.</p>
+                            <a class="carousel-btn"
+                                href="https://wa.me/5579998870534?text=Olá! Quero saber sobre o plano móvel de 30GB."
+                                target="_blank" rel="noopener noreferrer">Quero o plano móvel</a>
                         </article>
-                        
-                        <article aria-hidden="true" class="carousel-slide">
+
+                        <article class="carousel-slide" aria-hidden="true">
                             <span class="carousel-badge purple">Combo Campeão</span>
                             <h3>Fibra + Móvel + TV</h3>
-                            <div class="carousel-speed">R$ <span>119,90</span></div>
-                            <p>Leve 500 Mega de Fibra fixa para casa + 30GB de internet móvel de alta performance para o seu celular.</p>
-                            <a class="carousel-btn" href="https://wa.me/5579998870534?text=Olá! Quero o combo Fibra + Móvel por R$119,90." rel="noopener noreferrer" target="_blank">
-                                Quero o combo
-                            </a>
+                            <div class="carousel-speed">R$ <span>119,80</span></div>
+                            <p>Leve 700 Mega de fibra fixa para casa + 30GB de internet móvel para o celular.</p>
+                            <a class="carousel-btn"
+                                href="https://wa.me/5579998870534?text=Olá! Quero o combo Fibra + Móvel por R$119,80."
+                                target="_blank" rel="noopener noreferrer">Quero o combo</a>
                         </article>
                     </div>
-                    
+
                     <div class="carousel-controls">
-                        <button aria-label="Slide anterior" class="carousel-btn-nav" id="prev-slide" type="button">
+                        <button class="carousel-btn-nav" id="prev-slide" type="button" aria-label="Slide anterior">
                             <i data-lucide="chevron-left"></i>
                         </button>
-                        <div aria-label="Escolher slide" class="carousel-dots" role="tablist">
-                            <button aria-label="Ir para o slide 1" aria-pressed="true" class="dot active" type="button"></button>
-                            <button aria-label="Ir para o slide 2" aria-pressed="false" class="dot" type="button"></button>
-                            <button aria-label="Ir para o slide 3" aria-pressed="false" class="dot" type="button"></button>
+
+                        <div class="carousel-dots" role="tablist" aria-label="Escolher slide">
+                            <button class="dot active" type="button" aria-label="Ir para o slide 1"
+                                aria-pressed="true"></button>
+                            <button class="dot" type="button" aria-label="Ir para o slide 2"
+                                aria-pressed="false"></button>
+                            <button class="dot" type="button" aria-label="Ir para o slide 3"
+                                aria-pressed="false"></button>
                         </div>
-                        <button aria-label="Próximo slide" class="carousel-btn-nav" id="next-slide" type="button">
+
+                        <button class="carousel-btn-nav" id="next-slide" type="button" aria-label="Próximo slide">
                             <i data-lucide="chevron-right"></i>
                         </button>
-                        <button aria-label="Pausar carrossel" aria-pressed="false" class="carousel-play" id="toggle-autoplay" type="button">
+
+                        <button class="carousel-play" id="toggle-autoplay" type="button" aria-label="Pausar carrossel"
+                            aria-pressed="false">
                             <i data-lucide="pause"></i>
                         </button>
                     </div>
@@ -112,91 +130,117 @@
                 <h2>Escolha seu Plano de Fibra Óptica</h2>
                 <p class="section-subtitle">Conexão estável com tecnologia de ponta para navegar, jogar e trabalhar.</p>
             </div>
-            
+
             <div class="grid-plans">
                 <div class="card card-purple">
                     <div class="card-header">
                         <h3>Plano Inicial</h3>
                         <div class="velocity">400 <span>MEGA</span></div>
                     </div>
-                    <div class="price">R$ 65,00<span>/mês</span></div>
+                    <div class="price">R$ 65,00 <span>/mês</span></div>
                     <ul class="features-list">
                         <li><i data-lucide="check-circle-2"></i> 100% Fibra Óptica</li>
                         <li><i data-lucide="check-circle-2"></i> Ideal para redes sociais e navegação</li>
                         <li><i data-lucide="check-circle-2"></i> Roteador Wi-Fi incluso</li>
-                       
                     </ul>
-                    <a class="btn-plan" href="https://wa.me/5579998870534?text=Olá! Quero contratar o Plano de 300 Mega por R$60,00." rel="noopener noreferrer" target="_blank">Contratar Agora</a>
+                    <a class="btn-plan"
+                        href="https://wa.me/5579998870534?text=Olá! Quero contratar o Plano Inicial de 400 Mega por R$65,00."
+                        target="_blank" rel="noopener noreferrer">Contratar agora</a>
                 </div>
 
                 <div class="card card-purple">
                     <div class="card-header">
-                        <h3>Plano Essencial</h3>
+                        <h3>Plano Essencial Combo</h3>
                         <div class="velocity">700 <span>MEGA</span></div>
                     </div>
-                    <div class="price">R$ 79,90<span>/mês</span></div>
+
+                    <div class="combo-badge">Combo Fibra + Móvel</div>
+
+                    <div class="price">R$ 119,80 <span>/mês</span></div>
+
                     <ul class="features-list">
-                        <li><i data-lucide="check-circle-2"></i> Perfeito para vídeos e streaming HD</li>
-                        <li><i data-lucide="check-circle-2"></i> Download e Upload estáveis</li>
-                        <li><i data-lucide="check-circle-2"></i> Roteador Dual Band Avançado</li>
-                        <li><i data-lucide="check-circle-2"></i> Aplicativo de TV Incluso</li>
+                        <li><i data-lucide="check-circle-2"></i> Internet fibra com alta estabilidade</li>
+                        <li><i data-lucide="check-circle-2"></i> Internet móvel inclusa para seu celular</li>
+                        <li><i data-lucide="check-circle-2"></i> Ideal para casa e uso fora de casa</li>
+                        <li><i data-lucide="check-circle-2"></i> Suporte local especializado</li>
                     </ul>
-                    <a class="btn-plan" href="https://wa.me/5579998870534?text=Olá! Quero contratar o Plano de 400 Mega por R$65,00." rel="noopener noreferrer" target="_blank">Contratar Agora</a>
+
+                    <a class="btn-plan"
+                        href="https://wa.me/5579998870534?text=Olá! Quero contratar o Combo Fibra + Móvel de 700 Mega por R$119,80."
+                        target="_blank" rel="noopener noreferrer">
+                        Contratar agora
+                    </a>
                 </div>
 
                 <div class="card card-purple featured">
-                    <div class="badge">Melhor Custo-Benefício</div>
+                    <div class="badge">Melhor custo-benefício</div>
+
                     <div class="card-header">
-                        <h3>Plano Ultra</h3>
+                        <h3>Plano Ultra Combo</h3>
                         <div class="velocity">900 <span>MEGA</span></div>
                     </div>
-                    <div class="price">R$ 99,90<span>/mês</span></div>
+
+                    <div class="combo-badge premium">Combo Fibra + Móvel</div>
+
+                    <div class="price">R$ 139,80 <span>/mês</span></div>
+
                     <ul class="features-list">
-                        <li><i data-lucide="check-circle-2"></i> Ultravelocidade para Gamers</li>
-                        <li><i data-lucide="check-circle-2"></i> Suporta múltiplos acessos simultâneos</li>
+                        <li><i data-lucide="check-circle-2"></i> Performance máxima para vários dispositivos</li>
+                        <li><i data-lucide="check-circle-2"></i> Internet móvel inclusa para sua rotina</li>
                         <li><i data-lucide="check-circle-2"></i> Wi-Fi 6 de alta performance</li>
-                        <li><i data-lucide="check-circle-2"></i> Combo de canais premium digitais</li>
+                        <li><i data-lucide="check-circle-2"></i> Mais velocidade para jogos, streaming e trabalho</li>
                     </ul>
-                    <a class="btn-plan cta-highlight" href="https://wa.me/5579998870534?text=Olá! Quero o Plano Ultra de 500 Mega por R$69,90." rel="noopener noreferrer" target="_blank">Assinar Agora</a>
+
+                    <a class="btn-plan cta-highlight"
+                        href="https://wa.me/5579998870534?text=Olá! Quero contratar o Combo Fibra + Móvel de 900 Mega por R$139,80."
+                        target="_blank" rel="noopener noreferrer">
+                        Assinar agora
+                    </a>
                 </div>
-            </div>
         </section>
 
         <section class="movel-section" id="movel">
             <div class="movel-content">
                 <div class="movel-text">
-                    <div class="tagline orange">Mobilidade Total</div>
-                    <h2>Aracaju Web Móvel: O chip que conecta você na rua</h2>
-                    <p>Não fique desconectado quando sair de casa. Com os nossos planos móveis, você tem a maior cobertura da região com benefícios exclusivos que cabem no bolso.</p>
+                    <div class="tagline orange">Mobilidade total</div>
+                    <h2>Aracaju Web Móvel: o chip que conecta você na rua</h2>
+                    <p>Não fique desconectado quando sair de casa. Com os nossos planos móveis, você tem cobertura
+                        nacional e benefícios exclusivos.</p>
+
                     <div class="movel-cards-mini">
                         <div class="mini-feature">
                             <i data-lucide="smartphone"></i>
                             <div>
-                                <h4>WhatsApp, Instagram, Facebook e Waze Ilimitados</h4>
-                               <div class="icones-sociais">
-                                <img src="/assets/whatsapp.png" alt="whatsapp">
-                                <img src="/assets/instagram.png" alt="instagram">
-                                <img src="/assets/facebook.png" alt="facebook">
-                                <img src="/assets/waze.png" alt="waze">
-                               </div>
-                                <p>Envie mensagens, áudios e fotos, poste seu dia a dia e navegue no GPS sem gastar seus dados.</p>
+                                <h4>WhatsApp, Instagram, Facebook e Waze ilimitados</h4>
+                                <div class="icones-sociais">
+                                    <img src="./assets/whatsapp.png" alt="WhatsApp">
+                                    <img src="./assets/instagram.png" alt="Instagram">
+                                    <img src="./assets/facebook.png" alt="Facebook">
+                                    <img src="./assets/waze.png" alt="Waze">
+                                </div>
+                                <p>Envie mensagens, áudios e fotos, poste seu dia a dia e navegue no GPS sem gastar seus
+                                    dados.</p>
                             </div>
                         </div>
+
                         <div class="mini-feature">
                             <i data-lucide="phone-forwarded"></i>
                             <div>
-                                <h4>Ligações Livres</h4>
+                                <h4>Ligações livres</h4>
                                 <p>Fale com qualquer operadora do Brasil sem custos adicionais.</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="movel-highlight-card">
                     <h3>Plano Celular Smart</h3>
                     <div class="big-gb">30 <span>GB</span></div>
                     <p class="movel-price">Por apenas <strong>R$ 39,90</strong>/mês</p>
-                    <a class="cta-main orange-bg" href="https://wa.me/5579998870534?text=Olá! Quero ativar um chip com o Plano Móvel de 30GB." rel="noopener noreferrer" target="_blank">
-                        Pedir meu Chip Grátis
+                    <a class="cta-main orange-bg"
+                        href="https://wa.me/5579998870534?text=Olá! Quero ativar um chip com o Plano Móvel de 30GB."
+                        target="_blank" rel="noopener noreferrer">
+                        Pedir meu chip grátis
                     </a>
                 </div>
             </div>
@@ -207,26 +251,30 @@
                 <h2>Por que escolher a Aracaju Web?</h2>
                 <p class="section-subtitle">Experiência digital completa com diferenciais pensados para você.</p>
             </div>
+
             <div class="grid-benefits">
                 <div class="benefit-card">
                     <div class="benefit-icon"><i data-lucide="zap"></i></div>
-                    <h3>Fibra de Verdade</h3>
-                    <p>Conexão de ponta a ponta que garante a velocidade contratada sem oscilações climáticas.</p>
+                    <h3>Fibra de verdade</h3>
+                    <p>Conexão de ponta a ponta que garante a velocidade contratada com estabilidade.</p>
                 </div>
+
                 <div class="benefit-card">
                     <div class="benefit-icon"><i data-lucide="headphones"></i></div>
-                    <h3>Suporte Local e Rápido</h3>
-                    <p>Equipe técnica qualificada na região de Aracaju para resolver suas dúvidas com agilidade humana.</p>
+                    <h3>Suporte local e rápido</h3>
+                    <p>Equipe técnica na região de Aracaju para resolver dúvidas com agilidade.</p>
                 </div>
+
                 <div class="benefit-card">
                     <div class="benefit-icon"><i data-lucide="tv-2"></i></div>
-                    <h3>Canais de TV Grátis</h3>
-                    <p>Todos os nossos planos dão acesso a mais de 100 canais digitais de filmes, esportes e notícias.</p>
+                    <h3>Canais de TV grátis</h3>
+                    <p>Acesso a mais de 100 canais digitais de filmes, esportes e notícias.</p>
                 </div>
+
                 <div class="benefit-card">
                     <div class="benefit-icon"><i data-lucide="shield-check"></i></div>
-                    <h3>Sem Taxa de Instalação</h3>
-                    <p>Aproveite a instalação e a configuração dos equipamentos de forma 100% gratuita na contratação.</p>
+                    <h3>Instalação</h3>
+                    <p>Instalação e configuração dos equipamentos rápida e personalizada na contratação.</p>
                 </div>
             </div>
         </section>
@@ -235,8 +283,10 @@
             <div class="tv-banner">
                 <div class="tv-info">
                     <span class="bonus-tag">BÔNUS EXCLUSIVO</span>
-                    <h2>Ganhe mais de 100 Canais Digitais Grátis!</h2>
-                    <p>Assinando qualquer plano Aracaju Web, você recebe acesso completo ao aplicativo <strong>CDn TV</strong> para assistir no celular, computador ou Smart TV.</p>
+                    <h2>Ganhe mais de 100 canais digitais grátis!</h2>
+                    <p>Assinando um combo Aracaju Web, você recebe acesso ao aplicativo CDn TV para assistir no celular,
+                        computador ou Smart TV.</p>
+
                     <div class="tv-channels-logos">
                         <span class="channel-badge">Globo</span>
                         <span class="channel-badge">SBT</span>
@@ -250,65 +300,64 @@
 
         <section class="coverage-container" id="cobertura">
             <div class="section-title">
-                <h2>Verifique a Disponibilidade na sua Região</h2>
+                <h2>Verifique a disponibilidade na sua região</h2>
                 <p class="section-subtitle">Digite seu CEP abaixo para confirmar a cobertura instantaneamente.</p>
             </div>
+
             <div class="coverage-search-box">
-                <input id="cep-input" maxlength="9" placeholder="Ex: 49000-000" type="text"/>
+                <input id="cep-input" maxlength="9" placeholder="Ex: 49000-000" type="text" />
                 <button id="btn-consultar" type="button">
                     <i data-lucide="search"></i> Consultar CEP
                 </button>
             </div>
+
             <div id="coverage-feedback" class="feedback-message"></div>
         </section>
 
         <section class="social-engagement">
             <div class="social-content">
                 <h2>Fique por dentro das novidades!</h2>
-                <p>Siga-nos nas redes sociais e acompanhe dicas de tecnologia, sorteios, novidades sobre ampliação de cobertura e promoções relâmpago.</p>
+                <p>Siga-nos nas redes sociais e acompanhe dicas de tecnologia, sorteios, novidades e promoções
+                    relâmpago.</p>
+
                 <div class="social-buttons-grid">
-                    <a class="social-btn instagram" href="https://www.instagram.com/aracajuweb_?utm_source=qr&igsh=MXFscTBpd21laWdoZw==" rel="noopener noreferrer" target="_blank">
+                    <a class="social-btn instagram"
+                        href="https://www.instagram.com/aracajuweb_?utm_source=qr&igsh=MXFscTBpd21laWdoZw=="
+                        target="_blank" rel="noopener noreferrer">
                         <i data-lucide="instagram"></i> @aracajuweboficial
                     </a>
-                    <a class="social-btn whatsapp-community" href="https://wa.me/5579998870534" rel="noopener noreferrer" target="_blank">
-                        <i data-lucide="message-circle"></i> Fale Conosco no Zap
+                    <a class="social-btn whatsapp-community" href="https://wa.me/5579998870534" target="_blank"
+                        rel="noopener noreferrer">
+                        <i data-lucide="message-circle"></i> Fale conosco no zap
                     </a>
-                    <a class="social-btn suporte" href="https://wa.me/5579991200034" rel="noopener noreferrer" target="_blank">
-                        <i data-lucide="phone-call"></i> Linha de Suporte Alternativa
+                    <a class="social-btn suporte" href="https://wa.me/5579991200034" target="_blank"
+                        rel="noopener noreferrer">
+                        <i data-lucide="phone-call"></i> Linha de suporte alternativa
                     </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER ATUALIZADO COM INFORMAÇÕES INSTITUCIONAIS -->
-<footer style="background: #0d0312; border-top: 2px solid rgba(255, 85, 0, 0.2); padding: 40px 5%; color: #ffffff; font-family: sans-serif;">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px;">
-    
-    <!-- Nome da Empresa e CNPJ -->
-    <div>
-      <h3 style="margin: 0 0 5px 0; color: #ff5500; font-size: 1.2rem; uppercase; letter-spacing: 1px;">ARACAJU WEB TELECOM LTDA</h3>
-      <p style="margin: 0; color: #a0a0a0; font-size: 0.9rem;">CNPJ: 41.386.534/0001-85</p>
-    </div>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <h3>ARACAJU WEB TELECOM LTDA</h3>
+                <p>CNPJ: 41.386.534/0001-85</p>
+            </div>
 
-    <!-- Endereço Completo -->
-    <div style="max-width: 600px; border-top: 1px solid rgba(255, 255, 255, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 15px 0; width: 100%;">
-      <p style="margin: 0; color: #e0e0e0; font-size: 0.95rem; line-height: 1.6;">
-        Rua Capitanias Hereditárias, Nº 70 — Bairro Santa Maria<br>
-        Aracaju — SE | CEP: 49044-200
-      </p>
-    </div>
+            <div class="footer-address">
+                <p>Rua Capitanias Hereditárias, Nº 70 — Bairro Santa Maria</p>
+                <p>Aracaju — SE | CEP: 49044-200</p>
+            </div>
 
-    <!-- Direitos Autorais -->
-    <div>
-      <p style="margin: 0; color: #707070; font-size: 0.8rem;">
-        &copy; 2026 Aracaju Web. Todos os direitos reservados. Desenvolvido por Ismael Vieira
-      </p>
-    </div>
-
-  </div>
-</footer>
+            <div>
+                <p>&copy; 2026 Aracaju Web. Todos os direitos reservados. Desenvolvido por Ismael Vieira.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
