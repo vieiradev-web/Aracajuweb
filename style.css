@@ -43,7 +43,7 @@ body {
 body {
   position: relative;
   background:
-    radial-gradient(circle at top left, rgba(255, 85, 0, 0.14), transparent 34%),
+    radial-gradient(circle at top left, rgba(255, 85, 0, 0.041), transparent 34%),
     radial-gradient(circle at top right, rgba(168, 85, 247, 0.12), transparent 30%),
     linear-gradient(180deg, #1b0721 0%, #100314 100%);
   overflow-x: hidden;
@@ -71,7 +71,7 @@ body {
   height: 420px;
   top: -120px;
   left: -120px;
-  background: rgba(255, 85, 0, 0.22);
+  background: rgba(255, 85, 0, 0.199);
   animation: floatA 14s ease-in-out infinite;
 }
 
@@ -80,7 +80,7 @@ body {
   height: 520px;
   top: 20%;
   right: -180px;
-  background: rgba(168, 85, 247, 0.2);
+  background: rgba(166, 81, 247, 0.267);
   animation: floatB 18s ease-in-out infinite;
 }
 
@@ -89,7 +89,7 @@ body {
   height: 360px;
   bottom: -140px;
   left: 20%;
-  background: rgba(255, 122, 51, 0.12);
+  background: rgba(255, 122, 51, 0.151);
   animation: floatC 16s ease-in-out infinite;
 }
 
